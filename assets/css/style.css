@@ -311,6 +311,41 @@ h2 {
 .modal-wide .modal-body {
   overflow-y: auto;
 }
+.modal-title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 300;
+  color: #e8756d;
+  margin-bottom: 10px;
+  margin-top: : 20px;
+}
+
+.text-intro {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.modal-body input[type='range'],
+.modal-body input[type='text'],
+.modal-body p {
+margin-bottom: 15px;
+}
+
+.modal-footer input[type='submit'] {
+  border:0;
+   outline:none;
+   border-radius:0px;
+   padding:15px 15px;
+   font-size:2rem;
+   font-weight:$bold;
+   text-transform:uppercase;
+   letter-spacing:.1em;
+   background:#e8756d;
+   color:#fff;
+   transition:all.5s ease;
+   -webkit-appearance: none;
+}
 
 input[type='submit'] {
   cursor: pointer;
@@ -342,7 +377,6 @@ input[type=range] {
   height:15px;
   -webkit-border-radius: 1em;
   border-radius: 1em;
-
   -webkit-background-clip: padding;
   background-clip: padding-box;
   border: 1px solid #aaa;
@@ -366,22 +400,6 @@ input[type="range"]::-webkit-slider-thumb {
 
 .tablist {
   padding: 0 0 25px;
-}
-
-.btn-success {
-  background: #e8756d;
-  border-radius:0;
-  border: 2px solid #e8756d;
-  webkit-transition: all 400ms cubic-bezier(.4,0,.2,1);
-  transition: all 400ms cubic-bezier(.4,0,.2,1);
-}
-
-.btn-success:hover,.btn-success:focus {
-  background: rgba(26, 161, 157, 0);
-  border: 2px solid #1aa19d;
-  webkit-transition: all 400ms cubic-bezier(.4,0,.2,1);
-  transition: all 400ms cubic-bezier(.4,0,.2,1);
-  color: #e8756d;
 }
 
 a {

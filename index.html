@@ -15,6 +15,11 @@
   <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
       <a class="navbar-brand" href="#"><img src="assets/img/logo.png"> Ninja Boosting</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
@@ -22,8 +27,9 @@
         <li><a href="#informations">Informations</a></li>
         <li><a href="#boosting">Boost</a></li>
         <li><a data-toggle="modal" href="#ConnexionModal">Connexion/Inscription</a></li>
+        <!-- à n'afficher que lorsque l'utilisateur est log, design de l'interface à définir
+        <li><a data-toggle="modal" href="#CommandeModal">Commande en cours</a></li>-->
       </ul>
-
     </div>
   </div>
 </nav>
@@ -147,8 +153,9 @@
         <h4 class="modal-title">Parties de Placement</h4>
       </div>
       <div class="modal-body">
-        <p>Vous avez trop peur de vous confronter vous même à vos adversaires et souhaitez entamer la saison de la meilleure des manières? Ninja Boosting est la pour vous aider</p>
-
+        <div class="text-intro">
+          <p>Vous avez trop peur de vous confronter vous même à vos adversaires et souhaitez entamer la saison de la meilleure des manières? Ninja Boosting est la pour vous aider</p>
+        </div>
     <div class="tablist">
       <div class="row">
         <div class="col-lg-12 nav-tab-holder">
@@ -157,28 +164,21 @@
           <li role="presentation" class="col-lg-6"><a href="#nonclasse" aria-controls="nonclasse" role="tab" data-toggle="tab">Non classé la saison précédente</a></li>
         </ul>
       </div>
-
       </div>
-
-
       <div class="tab-content">
         <div role="tabpanel" class="tab-pane active" id="classe">
           <div class="row">
-
               <article role="">
                 <h3 class="text-center"></i>Classé la saison précédente</h3>
                 <form class="placementclasse" action="index.html" method="post">
                   <div class='range'>
-                    LP Saison précédente:
+                    <p>LP Saison précédente:</p>
                     <input class='range__slider' id='slider' max='3800' min='0' oninput='amount.value=slider.value' type='range' value='1000'>
-                    <br><br>
                     <input class='range__amount' id='amount' oninput='slider.value=amount.value' type='text' value='1000'>
                   </div>
-                  <br><br>
                   <div class='range'>
-                    Nombre de parties souhaitées:
+                    <p>Nombre de parties souhaitées:</p>
                     <input class='range__slider' id='slider2' max='10' min='0' oninput='amount2.value=slider2.value' type='range' value='1'>
-                    <br><br>
                     <input class='range__amount' id='amount2' oninput='slider2.value=amount2.value' type='text' value='1'>
                   </div>
                   <center>
@@ -189,16 +189,14 @@
               </article>
           </div>
         </div>
-
       <div role="tabpanel" class="tab-pane" id="nonclasse">
         <div class="row">
             <article role="">
               <h3 class="text-center"></i>Non classé la saison précédente</h3>
               <form class="placementnonclasse" action="index.html" method="post">
                 <div class='range'>
-                  Nombre de parties souhaitées:
+                  <p>Nombre de parties souhaitées:</p>
                   <input class='range__slider' id='slider2' max='10' min='0' oninput='amount2.value=slider2.value' type='range' value='1'>
-                  <br><br>
                   <input class='range__amount' id='amount2' oninput='slider2.value=amount2.value' type='text' value='1'>
                 </div>
                 <center>
@@ -212,7 +210,7 @@
   </div>
   </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Valider</button>
+        <input type="submit" value="Valider">
       </div>
     </div>
   </div>
@@ -226,18 +224,19 @@
         <h4 class="modal-title">Power Leveling</h4>
       </div>
       <div class="modal-body">
-        <p>Si vous avez le niveau gold mais que vos alliés sont trop mauvais, faites appel à nous</p>
-
+        <div class="text-intro">
+          <p>Si vous avez le niveau gold mais que vos alliés sont trop mauvais, faites appel à nous</p>
+        </div>
         <form>
         <div class='range'>
-          LP Actuels:
+          <p>LP Actuels:</p>
           <input class='range__slider' id='slider' max='3800' min='0' oninput='amount.value=slider.value' type='range' value='1000'>
           <br><br>
           <input class='range__amount' id='amount' oninput='slider.value=amount.value' type='text' value='1000'>
         </div>
         <br><br>
         <div class='range'>
-          LP Souhaités:
+          <p>LP Souhaités:</p>
           <input class='range__slider' id='slider2' max='3800' min='0' oninput='amount2.value=slider2.value' type='range' value='1000'>
           <br><br>
           <input class='range__amount' id='amount2' oninput='slider2.value=amount2.value' type='text' value='1000'>
@@ -249,7 +248,7 @@
       </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Valider</button>
+        <input type="submit" value="Valider">
       </div>
     </div>
   </div>
@@ -259,21 +258,22 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title">Anti Decay</h4>
+        <div class="text-intro">
+          <h4 class="modal-title">Anti-Decay</h4>
+        </div>
       </div>
       <div class="modal-body">
         <p>Vous avez miraculeusement (ou en payant) atteint un rang acceptable et vous ne souhaitez pas le perdre pour inactivité (ou parce que vous savez que la partie sera perdue au moment ou elle sera lancée)? Ninja Boosting vous propose un Anti Decay adapté à vos besoins.</p>
-
         <form>
         <div class='range'>
-          LP Actuels:
+          <p>LP Actuels:</p>
           <input class='range__slider' id='slider' max='3800' min='3000' oninput='amount.value=slider.value' type='range' value='3000'>
           <br><br>
           <input class='range__amount' id='amount' oninput='slider.value=amount.value' type='text' value='3000'>
         </div>
         <br><br>
         <div class='range'>
-          Jours d'anti decay:
+          <p>Jours d'anti decay:</p>
           <input class='range__slider' id='slider2' max='30' min='1' oninput='amount2.value=slider2.value' type='range' value='2'>
           <br><br>
           <input class='range__amount' id='amount2' oninput='slider2.value=amount2.value' type='text' value='2'>
@@ -285,7 +285,7 @@
       </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Valider</button>
+        <input type="submit" value="Valider">
       </div>
     </div>
   </div>
@@ -320,7 +320,6 @@
             </article>
         </div>
       </div>
-
     <div role="tabpanel" class="tab-pane" id="inscription">
       <div class="row">
           <article role="login">
@@ -339,8 +338,9 @@
   </div>
 </div>
 
-    <script  src="assets/js/index.js"></script>
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+<script  src="assets/js/index.js"></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src='http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js'></script>
 <script class="cssdeck" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 
