@@ -25,7 +25,7 @@ section .container {
   padding: 30px 0 50px 0;
 }
 
-section.bg {
+section {
   background: #f7f7f7;
 }
 
@@ -168,7 +168,8 @@ a {
   padding: 0 2.5%;
 }
 
-.col.two:hover {
+.col.two:hover,
+.col.three:hover {
 transform: scale(1.1);
 }
 
@@ -293,8 +294,7 @@ h2 {
 .white h1,
 .white h2,
 .white p,
-.white div,
-.white a {
+.white div {
   color: #fff;
 }
 
